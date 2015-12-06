@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+    if (true) {
+    	const temp = 123;
+    }
+    // console.log(temp);	未定义
+
+    const temp = 123;
+    // temp = 2;	// 出错 const为常量
+
+    let b = 1;
+    console.log(window.b);	// undefined 全局变量不会作为全局对象的属性
+    </script>
+</body>
+
+</html>
