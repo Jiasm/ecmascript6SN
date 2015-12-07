@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+    // 解构赋值（左右两边的结构需要对应，否则会报错的）
+    var [a, b, c] = [1, 2, 3];
+    console.log(a, b, c);
+
+    let [d, [e, f], g] = [4, [5, 6], 7];
+    console.log(d, e, f, g);
+
+    const [h = 8, i = h + 1] = [];	// 也可以有默认值
+    console.log(h, i);
+
+    var [j, ...k] = [10, 11, 12, 13, 14];
+    console.log(j, k);
+
+    var [l, m] = [15, 16, 17];	// 17将没有什么卵用
+    console.log(l, m);
+
+    var [n, o = getNum()] = [17, 18];
+    console.log(n, o);
+
+    var [p, q = getNum()] = [19];
+    console.log(p, q);
+
+    function MyList () {
+    	this.valueOf = function () {
+    		return [20, 21];
+    	}
+    }
+
+    var [r, s] = new Set([20, 21]);
+    console.log(r, s);
+
+    function getNum () {
+    	console.log('call getNum');
+    	return 233;
+    }
+    // 等号右边必须为数组或类数组
+    </script>
+</body>
+
+</html>

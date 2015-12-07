@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+    // 混合使用
+
+    var [test, {foo: key}, temp, [tt, {ttt: myVal}]]=[1, {foo: [2, 4, 5]}, 3, [6, {ttt: 233}]];
+    console.log(test, key, temp, tt, myVal);
+
+    /*
+        var lhs = {foo: key},
+            rhs = {foo: 233}
+        // 省略匹配格式
+        for (var key in rhs) {
+            eval('var ' + lhs[key] + ' = ' + rhs[key]);
+        }
+    */
+
+    var {t: test = 2} = {t: 233};
+    console.log(test);
+
+    console.log([[1, 2], [3, 4]].map(([a, b]) => a + b));   // 看到这终于知道了解构赋值的作用了
+
+    function doAdd ({a = 0, b = 0} = 0) {
+        console.log(a + b);
+    }
+    doAdd({a: 1, b: 2});
+    doAdd({b: 2});
+    doAdd({});
+    doAdd();
+    </script>
+</body>
+
+</html>
