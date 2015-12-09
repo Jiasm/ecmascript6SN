@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        console.log(Number.isFinite(1));    // 返回参数是否不为无穷数
+        console.log(Number.isFinite(-Infinity));
+
+        console.log(Number.isNaN(1));       // 返回是否为一个数字
+        //（isNaN('a')返回true，而Number.isNaN(返回false)）
+        console.log(Number.isNaN('a' * 1));
+
+        console.log(Number.isInteger(1));   // 判断参数是否为一个整数
+        console.log(Number.isInteger(1.1));
+        console.log(Number.isInteger('1'));
+    </script>
+</body>
+
+</html>
