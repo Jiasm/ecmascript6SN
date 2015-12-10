@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete">123</div>
+    <div id="test">233</div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        var array = [1, 2, 3, 4, 5];
+        console.log(array.find(a => a > 2));    // 如果找到了返回该元素，没找到会返回undefined
+        var divs = document.querySelectorAll("div");
+        var $test = array.find.call(divs, a => a.innerHTML === "233");
+        console.log($test);
+    </script>
+</body>
+
+</html>

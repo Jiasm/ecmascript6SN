@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
+        // 从第一个参数的下标开始，为被替换的值起始位置
+        // 0
+        // 从第二个参数的下标开始，为被复制的值起始位置
+        // 3
+        // 复制第三个参数（不填则到array.length） - 第二个参数 长度的数值
+        // 4 - 3 = 1
+        // 该结果为： [4, 2, 3, 4, 5]
+    </script>
+</body>
+
+</html>

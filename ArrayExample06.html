@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete">123</div>
+    <div id="test">233</div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        var array = ['a', 'b'];
+        for (let key of array.keys()) {
+            console.log(key);
+        }
+        /*for (let value of array.values()) {   // 并没有values方法
+            console.log(value);
+        }*/
+        for (let value of array) {   // 直接这么搞就行了
+            console.log(value);
+        }
+        for (let [key, value] of array.entries()) {
+            console.log(key, value);
+        }
+
+        console.log(array.includes(1));
+        console.log(array.includes('a'));
+    </script>
+</body>
+
+</html>
