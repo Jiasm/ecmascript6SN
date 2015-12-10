@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        var divs = document.querySelectorAll("div");
+        var array1 = Array.from(divs);       // 将类数组对象转换为数组
+        array1.forEach((ele) => console.log(ele));
+
+        var arrObj = {
+            0 : 'first',
+            1 : 'second',
+            2 : 'third',
+            length : 3
+        }
+        var array2 = Array.from(arrObj);
+        array2.forEach((item) => console.log(item));
+
+        var someEmpty = [1, , 2, 3, 4, , 5];
+        var array3 = Array.from(someEmpty, (a => a || 0));
+        console.log(array3);
+    </script>
+</body>
+
+</html>
