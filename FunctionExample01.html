@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete">123</div>
+    <div id="test">233</div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        function say (str1 = 'hello', str2 = 'world') {
+        	console.log(str1, str2);
+        }
+        say();
+        say('my');
+        say(undefined ,'China');
+
+        function say1 ({str1, str2} = {str1: 'hello', str2: 'world'}) {
+        	console.log(str1, str2);
+        }
+        say1();
+        say1({str1: 'hi'});
+
+        function say2 ({str1 = 'hello', str2 = 'world'} = {str1: 'hello', str2: 'world'}) {
+        	console.log(str1, str2);
+        }
+        say2();
+        say2({str1: 'hi'});
+    </script>
+</body>
+
+</html>
