@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+    var name = "niko",
+        obj = {name};
+    console.log(obj);
+
+    function info (name, age) {
+        return {
+            name,
+            age,
+            getName () {
+                return this.name;
+            },
+            getAge () {
+                return this.age;
+            }
+        }
+    }
+    var myInfo = info("tim", 18);
+    console.log(myInfo.getName());
+    console.log(myInfo.getAge());
+    </script>
+</body>
+
+</html>
