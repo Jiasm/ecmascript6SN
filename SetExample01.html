@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+    class Info {
+        constructor (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        getName () {
+            return this.name;
+        }
+        setName (value) {
+            this.name = value;
+        }
+        getAge () {
+            return this.age;
+        }
+        setAge (value) {
+            this.age = value;
+        }
+        showInfo () {
+            console.log(`My name is: ${this.name} I am ${this.age} years old`)
+        }
+    }
+    let niko = new Info("niko", 18);
+    niko.showInfo();
+
+    let infoList = new Set([
+        new Info("tim", 1),
+        new Info("lisa", 3),
+        new Info("node", 15)
+    ]);
+    for (let key of infoList.keys()) {
+        console.log(`from keys:${key.name}`)
+    }
+    for (let value of infoList.values()) {
+        console.log(`from values:${value.name}`)
+    }
+    for (let [key, value] of infoList.entries()) {
+        console.log(key === value); // 由此证明set的键和值是一个
+    }
+    for (let info of infoList) {
+        info.showInfo();
+    }
+    infoList.forEach((key, value, self) => {
+        console.log(key === value); // 由此证明set的键和值是一个
+    })
+
+    function unique (arr) {
+        return [...new Set(arr)]
+    }
+    console.log(unique([1,1,1,4,1,1,1,2,3]))
+    </script>
+</body>
+
+</html>
