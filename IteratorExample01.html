@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+    let arr = [1, 2],
+        arrGen = arr[Symbol.iterator]();
+    console.log(arrGen.next(), arrGen.next(), arrGen.next());
+
+    let set = new Set([1, 2]),
+        setGen = set[Symbol.iterator]();
+    console.log(setGen.next(), setGen.next(), setGen.next());
+
+    let key1 = {
+            name: 'key1'
+        },key2 = {
+            name: 'key2'
+        },
+        map = new Map().set(key1, 1).set(key2, 2),
+        mapGen = map[Symbol.iterator]();
+    console.log(mapGen.next(), mapGen.next());
+    </script>
+</body>
+
+</html>
