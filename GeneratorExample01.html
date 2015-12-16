@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script>
+    "use strict";
+    let getValue = function* () {
+        yield 1;
+        yield* [2, 3, 4];
+        yield 5;
+    }
+    let run = getValue();
+    console.log(run.next())
+    console.log(run.next())
+    console.log(run.next())
+    console.log(run.next())
+    console.log(run.next())
+    console.log(run.next())
+    </script>
+</body>
+
+</html>

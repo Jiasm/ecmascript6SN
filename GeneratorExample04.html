@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script>
+    "use strict";
+    let getValue = function*(initValue) {
+        let oneParm = yield initValue;
+        let twoParm = yield oneParm;
+        return twoParm;
+    },
+    initValue = 2,
+    oneParm = 4,
+    twoParm = 8,
+    run = getValue(initValue);
+    console.log(run.next());
+    console.log(run.next(oneParm));
+    console.log(run.next(twoParm));
+    </script>
+</body>
+
+</html>

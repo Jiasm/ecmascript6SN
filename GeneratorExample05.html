@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script>
+    "use strict";
+    let getValue = function*() {
+        console.log("开始计数");
+        for (let index = 1; true; index++) {
+            console.log(`${index}: ${yield}`);
+        }
+    },
+    run = getValue();
+    run.next();
+    run.next(1);
+    run.next(2);
+    run.next(7);
+    </script>
+</body>
+
+</html>
