@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'E:\\nodejs\\node.exe',
+1 verbose cli   'E:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'co',
+1 verbose cli   '-g' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData co
+8 silly fetchNamedPackageData co
+9 silly mapToRegistry name co
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/co
+13 verbose request uri https://registry.npmjs.org/co
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 09:33:52
+16 verbose request id 1308325699235348
+17 http request GET https://registry.npmjs.org/co
+18 info retry will retry, error on last attempt: Error: read ECONNRESET
+19 info attempt registry request try #2 at 09:34:23
+20 http request GET https://registry.npmjs.org/co
+21 info retry will retry, error on last attempt: Error: read ECONNRESET
+22 info attempt registry request try #3 at 09:35:42
+23 http request GET https://registry.npmjs.org/co
+24 silly fetchPackageMetaData Error: read ECONNRESET
+24 silly fetchPackageMetaData     at exports._errnoException (util.js:856:11)
+24 silly fetchPackageMetaData     at TLSWrap.onread (net.js:545:26)
+24 silly fetchPackageMetaData  error for co { [Error: read ECONNRESET] code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Starting
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: read ECONNRESET
+30 verbose stack     at exports._errnoException (util.js:856:11)
+30 verbose stack     at TLSWrap.onread (net.js:545:26)
+31 verbose cwd D:\gitSpace\ecmascript6SN\nodejsContainer
+32 error Windows_NT 6.1.7601
+33 error argv "E:\\nodejs\\node.exe" "E:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "co" "-g"
+34 error node v5.2.0
+35 error npm  v3.3.12
+36 error code ECONNRESET
+37 error errno ECONNRESET
+38 error syscall read
+39 error network read ECONNRESET
+39 error network This is most likely not a problem with npm itself
+39 error network and is related to network connectivity.
+39 error network In most cases you are behind a proxy or have bad network settings.
+39 error network
+39 error network If you are behind a proxy, please make sure that the
+39 error network 'proxy' config is set properly.  See: 'npm help config'
+40 verbose exit [ 1, true ]
