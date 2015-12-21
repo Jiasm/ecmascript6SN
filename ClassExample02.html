@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script>
+    "use strict";
+    let count = 0;
+    class Base {
+        constructor () {
+            this.index = ++count;
+        }
+    }
+    class People extends Base {
+        constructor () {        // 构造函数
+            super();            // 必须调用super
+            this.name = "niko"
+        }
+
+    }
+    class Man extends People {
+        // 如果不写constructor，则会有一个默认的，而且会默认执行super()
+    }
+
+    var loc = new Man();
+    // true
+    console.log(Base.__proto__ === Function.prototype);
+    console.log(Base.prototype.__proto__ === Object.prototype);
+    console.log(Man.__proto__ === People);
+    console.log(Man.prototype.__proto__ === People.prototype);                        // People
+    console.log(Man.__proto__.__proto__ === Base);
+    console.log(Man.prototype.__proto__.__proto__ === People.__proto__.prototype);    // Base
+    </script>
+</body>
+
+</html>

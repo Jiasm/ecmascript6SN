@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="templete"></div>
+    <div id="test"></div>
+    <script>
+    "use strict";
+    class MyArray extends [].constructor {
+        showItem () {
+            console.log(...this);
+        }
+    }
+    var myArray = new MyArray();
+    myArray.push(1);
+    myArray.push(2);
+    myArray.push(3);
+    myArray.push(4);
+    myArray.showItem();
+    myArray.length = 2;
+    myArray.showItem();
+    for (let obj of myArray.entries()) {
+        console.log(obj);
+    }
+    </script>
+</body>
+
+</html>
